@@ -29,6 +29,11 @@ app.use(express.json());
 app.use(cors());
 app.use(morgan("dev"));
 
+
+app.get('/', (req, res) => {
+  res.send('Welcome to the Blood Bank Backend!');
+});
+
 // ROUTES
 app.use("/api/v1/test", require("./routes/testRoutes"));
 app.use("/api/v1/auth", require("./routes/authRoutes"))
